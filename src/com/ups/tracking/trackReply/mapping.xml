@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns="http://castor.exolab.org/" xmlns:cst="http://castor.exolab.org/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<class name="com.ups.tracking.trackReply.Envelope">
+      <description xmlns="">Default mapping for class com.ups.tracking.trackReply.Envelope</description>
+      <map-to xml="Envelope"  />
+      <field name="header" type="java.lang.String">
+         <bind-xml name="Header" node="element" />
+      </field>
+      <field name="body" type="com.ups.tracking.trackReply.Body" collection="array">
+         <bind-xml name="Body" node="element" />
+      </field>
+   </class>
+      <class name="com.ups.tracking.trackReply.Body">
+      <description xmlns="">Default mapping for class com.ups.tracking.trackReply.Body</description>
+      <map-to xml="Body" />
+      <field name="trackResponse" type="com.ups.tracking.trackReply.TrackResponse" collection="array">
+         <bind-xml name="trk:TrackResponse" node="element" />
+      </field>
+   </class>
+	<class name="com.ups.tracking.trackReply.Reroute">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Reroute</description>
+		<map-to xml="common:Reroute" />
+		<field name="address" type="com.ups.tracking.trackReply.Address">
+			<bind-xml name="Address" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.CarrierActivityInformation">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.CarrierActivityInformation</description>
+		<map-to xml="CarrierActivityInformation" />
+		<field name="carrierId" type="java.lang.String">
+			<bind-xml name="CarrierId" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+		<field name="status" type="java.lang.String">
+			<bind-xml name="Status" node="element" />
+		</field>
+		<field name="arrival" type="com.ups.tracking.trackReply.Arrival">
+			<bind-xml name="Arrival" node="element" />
+		</field>
+		<field name="departure" type="com.ups.tracking.trackReply.Departure">
+			<bind-xml name="Departure" node="element" />
+		</field>
+		<field name="originPort" type="java.lang.String">
+			<bind-xml name="OriginPort" node="element" />
+		</field>
+		<field name="destinationPort" type="java.lang.String">
+			<bind-xml name="DestinationPort" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Package">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Package</description>
+		<map-to xml="Package" />
+		<field name="trackingNumber" type="java.lang.String">
+			<bind-xml name="TrackingNumber" node="element" />
+		</field>
+		<field name="rescheduledDeliveryDate" type="java.lang.String">
+			<bind-xml name="RescheduledDeliveryDate" node="element" />
+		</field>
+		<field name="rescheduledDeliveryTime" type="java.lang.String">
+			<bind-xml name="RescheduledDeliveryTime" node="element" />
+		</field>
+		<field name="reroute" type="com.ups.tracking.trackReply.Reroute">
+			<bind-xml name="Reroute" node="element" />
+		</field>
+		<field name="returnTo" type="com.ups.tracking.trackReply.ReturnTo">
+			<bind-xml name="ReturnTo" node="element" />
+		</field>
+		<field name="packageServiceOptions" type="com.ups.tracking.trackReply.PackageServiceOptions">
+			<bind-xml name="PackageServiceOptions" node="element" />
+		</field>
+		<field name="activity" type="com.ups.tracking.trackReply.Activity"
+			collection="array">
+			<bind-xml name="Activity" node="element" />
+		</field>
+		<field name="message" type="com.ups.tracking.trackReply.Message"
+			collection="array">
+			<bind-xml name="Message" node="element" />
+		</field>
+		<field name="packageWeight" type="com.ups.tracking.trackReply.PackageWeight">
+			<bind-xml name="PackageWeight" node="element" />
+		</field>
+		<field name="referenceNumber" type="com.ups.tracking.trackReply.ReferenceNumber"
+			collection="array">
+			<bind-xml name="ReferenceNumber" node="element" />
+		</field>
+		<field name="productType" type="com.ups.tracking.trackReply.ProductType">
+			<bind-xml name="ProductType" node="element" />
+		</field>
+		<field name="locationAssured" type="java.lang.String">
+			<bind-xml name="LocationAssured" node="element" />
+		</field>
+		<field name="alternateTrackingNumber" type="java.lang.String"
+			collection="array">
+			<bind-xml name="AlternateTrackingNumber" node="element" />
+		</field>
+		<field name="alternateTrackingInfo" type="com.ups.tracking.trackReply.AlternateTrackingInfo"
+			collection="array">
+			<bind-xml name="AlternateTrackingInfo" node="element" />
+		</field>
+		<field name="accessorial" type="com.ups.tracking.trackReply.Accessorial"
+			collection="array">
+			<bind-xml name="Accessorial" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.UnitOfMeasurement">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.UnitOfMeasurement</description>
+		<map-to xml="UnitOfMeasurement" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.TrackResponse">
+		<description xmlns:trk="http://www.ups.com/XMLSchema/XOLTWS/Track/v2.0">Default mapping for class
+			com.ups.tracking.trackReply.TrackResponse</description>
+		<map-to xml="trk:TrackResponse" />
+		<field name="response" type="com.ups.tracking.trackReply.Response"
+			required="true">
+			<bind-xml name="Response" node="element" />
+		</field>
+		<field name="shipment" type="com.ups.tracking.trackReply.Shipment"
+			collection="array">
+			<bind-xml name="Shipment" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Address">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Address</description>
+		<map-to xml="Address" />
+		<field name="addressLine1" type="java.lang.String">
+			<bind-xml name="AddressLine1" node="element" />
+		</field>
+		<field name="addressLine2" type="java.lang.String">
+			<bind-xml name="AddressLine2" node="element" />
+		</field>
+		<field name="addressLine3" type="java.lang.String">
+			<bind-xml name="AddressLine3" node="element" />
+		</field>
+		<field name="city" type="java.lang.String">
+			<bind-xml name="City" node="element" />
+		</field>
+		<field name="stateProvinceCode" type="java.lang.String">
+			<bind-xml name="StateProvinceCode" node="element" />
+		</field>
+		<field name="postalCode" type="java.lang.String">
+			<bind-xml name="PostalCode" node="element" />
+		</field>
+		<field name="countryCode" type="java.lang.String">
+			<bind-xml name="CountryCode" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.EstimatedDeliveryDetails">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.EstimatedDeliveryDetails</description>
+		<map-to xml="EstimatedDeliveryDetails" />
+		<field name="date" type="java.lang.String">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="serviceCenter" type="com.ups.tracking.trackReply.ServiceCenter">
+			<bind-xml name="ServiceCenter" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.DeliveryDate">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.DeliveryDate</description>
+		<map-to xml="DeliveryDate" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ShipmentServiceOptions">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ShipmentServiceOptions</description>
+		<map-to xml="ShipmentServiceOptions" />
+		<field name="COD" type="com.ups.tracking.trackReply.COD">
+			<bind-xml name="COD" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Response">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Response</description>
+		<map-to xml="Response" />
+		<field name="transactionReference" type="com.ups.tracking.trackReply.TransactionReference">
+			<bind-xml name="TransactionReference" node="element" />
+		</field>
+		<field name="responseStatusCode" type="java.lang.String"
+			required="true">
+			<bind-xml name="ResponseStatusCode" node="element" />
+		</field>
+		<field name="responseStatusDescription" type="java.lang.String">
+			<bind-xml name="ResponseStatusDescription" node="element" />
+		</field>
+		<field name="error" type="com.ups.tracking.trackReply.Error"
+			collection="array">
+			<bind-xml name="Error" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.DeliveryDateTime">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.DeliveryDateTime</description>
+		<map-to xml="DeliveryDateTime" />
+		<field name="type" type="com.ups.tracking.trackReply.Type"
+			required="true">
+			<bind-xml name="Type" node="element" />
+		</field>
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Type">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Type</description>
+		<map-to xml="Type" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ReturnTo">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ReturnTo</description>
+		<map-to xml="ReturnTo" />
+		<field name="address" type="com.ups.tracking.trackReply.Address">
+			<bind-xml name="Address" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Arrival">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Arrival</description>
+		<map-to xml="Arrival" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.AlternateTrackingInfo">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.AlternateTrackingInfo</description>
+		<map-to xml="AlternateTrackingInfo" />
+		<field name="type" type="java.lang.String">
+			<bind-xml name="Type" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+		<field name="value" type="java.lang.String" required="true">
+			<bind-xml name="Value" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Message">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Message</description>
+		<map-to xml="Message" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Appointment">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Appointment</description>
+		<map-to xml="Appointment" />
+		<field name="made" type="com.ups.tracking.trackReply.Made">
+			<bind-xml name="Made" node="element" />
+		</field>
+		<field name="requested" type="com.ups.tracking.trackReply.Requested">
+			<bind-xml name="Requested" node="element" />
+		</field>
+		<field name="beginTime" type="java.lang.String">
+			<bind-xml name="BeginTime" node="element" />
+		</field>
+		<field name="endTime" type="java.lang.String">
+			<bind-xml name="EndTime" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Made">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Made</description>
+		<map-to xml="Made" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.SignatureRequired">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.SignatureRequired</description>
+		<map-to xml="SignatureRequired" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ShipmentWeight">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ShipmentWeight</description>
+		<map-to xml="ShipmentWeight" />
+		<field name="unitOfMeasurement" type="com.ups.tracking.trackReply.UnitOfMeasurement">
+			<bind-xml name="UnitOfMeasurement" node="element" />
+		</field>
+		<field name="weight" type="java.lang.String">
+			<bind-xml name="Weight" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.COD">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.COD</description>
+		<map-to xml="COD" />
+		<field name="CODAmount" type="com.ups.tracking.trackReply.CODAmount">
+			<bind-xml name="CODAmount" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Error">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Error</description>
+		<map-to xml="Error" />
+		<field name="errorSeverity" type="java.lang.String" required="true">
+			<bind-xml name="ErrorSeverity" node="element" />
+		</field>
+		<field name="errorCode" type="java.lang.String" required="true">
+			<bind-xml name="ErrorCode" node="element" />
+		</field>
+		<field name="errorDescription" type="java.lang.String">
+			<bind-xml name="ErrorDescription" node="element" />
+		</field>
+		<field name="minimumRetrySeconds" type="java.lang.String">
+			<bind-xml name="MinimumRetrySeconds" node="element" />
+		</field>
+		<field name="errorLocation" type="com.ups.tracking.trackReply.ErrorLocation"
+			collection="array">
+			<bind-xml name="ErrorLocation" node="element" />
+		</field>
+		<field name="errorDigest" type="java.lang.String" collection="array">
+			<bind-xml name="ErrorDigest" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.EstimatedArrival">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.EstimatedArrival</description>
+		<map-to xml="EstimatedArrival" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.InquiryNumber">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.InquiryNumber</description>
+		<map-to xml="InquiryNumber" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String" required="true">
+			<bind-xml name="Description" node="element" />
+		</field>
+		<field name="value" type="java.lang.String" required="true">
+			<bind-xml name="Value" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.CargoReady">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.CargoReady</description>
+		<map-to xml="CargoReady" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ShipTo">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ShipTo</description>
+		<map-to xml="ShipTo" />
+		<field name="address" type="com.ups.tracking.trackReply.Address">
+			<bind-xml name="Address" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Manifest">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Manifest</description>
+		<map-to xml="Manifest" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.CurrentStatus">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.CurrentStatus</description>
+		<map-to xml="CurrentStatus" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String" required="true">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ReferenceNumber">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ReferenceNumber</description>
+		<map-to xml="ReferenceNumber" />
+		<field name="code" type="java.lang.String">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="value" type="java.lang.String" required="true">
+			<bind-xml name="Value" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.CODAmount">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.CODAmount</description>
+		<map-to xml="CODAmount" />
+		<field name="currencyCode" type="java.lang.String">
+			<bind-xml name="CurrencyCode" node="element" />
+		</field>
+		<field name="monetaryValue" type="java.lang.String" required="true">
+			<bind-xml name="MonetaryValue" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Requested">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Requested</description>
+		<map-to xml="Requested" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Format">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Format</description>
+		<map-to xml="Format" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Volume">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Volume</description>
+		<map-to xml="Volume" />
+		<field name="code" type="java.lang.String">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+		<field name="value" type="java.lang.String" required="true">
+			<bind-xml name="Value" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Shipment">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Shipment</description>
+		<map-to xml="Shipment" />
+		<field name="inquiryNumber" type="com.ups.tracking.trackReply.InquiryNumber">
+			<bind-xml name="InquiryNumber" node="element" />
+		</field>
+		<field name="shipmentIdentificationNumber" type="java.lang.String">
+			<bind-xml name="ShipmentIdentificationNumber" node="element" />
+		</field>
+		<field name="shipmentType" type="com.ups.tracking.trackReply.ShipmentType">
+			<bind-xml name="ShipmentType" node="element" />
+		</field>
+		<field name="candidateBookmark" type="java.lang.String">
+			<bind-xml name="CandidateBookmark" node="element" />
+		</field>
+		<field name="shipper" type="com.ups.tracking.trackReply.Shipper">
+			<bind-xml name="Shipper" node="element" />
+		</field>
+		<field name="shipTo" type="com.ups.tracking.trackReply.ShipTo">
+			<bind-xml name="ShipTo" node="element" />
+		</field>
+		<field name="shipmentWeight" type="com.ups.tracking.trackReply.ShipmentWeight">
+			<bind-xml name="ShipmentWeight" node="element" />
+		</field>
+		<field name="service" type="com.ups.tracking.trackReply.Service">
+			<bind-xml name="Service" node="element" />
+		</field>
+		<field name="referenceNumber" type="com.ups.tracking.trackReply.ReferenceNumber"
+			collection="array">
+			<bind-xml name="ReferenceNumber" node="element" />
+		</field>
+		<field name="currentStatus" type="com.ups.tracking.trackReply.CurrentStatus">
+			<bind-xml name="CurrentStatus" node="element" />
+		</field>
+		<field name="pickupDate" type="java.lang.String">
+			<bind-xml name="PickupDate" node="element" />
+		</field>
+		<field name="deliveryDetails" type="com.ups.tracking.trackReply.DeliveryDetails">
+			<bind-xml name="DeliveryDetails" node="element" />
+		</field>
+		<field name="deliveryDateTime" type="com.ups.tracking.trackReply.DeliveryDateTime"
+			collection="array">
+			<bind-xml name="DeliveryDateTime" node="element" />
+		</field>
+		<field name="volume" type="com.ups.tracking.trackReply.Volume">
+			<bind-xml name="Volume" node="element" />
+		</field>
+		<field name="billToName" type="java.lang.String">
+			<bind-xml name="BillToName" node="element" />
+		</field>
+		<field name="pickUpServiceCenter" type="com.ups.tracking.trackReply.PickUpServiceCenter">
+			<bind-xml name="PickUpServiceCenter" node="element" />
+		</field>
+		<field name="numberOfPieces" type="java.lang.String">
+			<bind-xml name="NumberOfPieces" node="element" />
+		</field>
+		<field name="numberOfPallets" type="java.lang.String">
+			<bind-xml name="NumberOfPallets" node="element" />
+		</field>
+		<field name="shipmentServiceOptions" type="com.ups.tracking.trackReply.ShipmentServiceOptions">
+			<bind-xml name="ShipmentServiceOptions" node="element" />
+		</field>
+		<field name="estimatedDeliveryDetails"
+			type="com.ups.tracking.trackReply.EstimatedDeliveryDetails">
+			<bind-xml name="EstimatedDeliveryDetails" node="element" />
+		</field>
+		<field name="signedForByName" type="java.lang.String">
+			<bind-xml name="SignedForByName" node="element" />
+		</field>
+		<field name="activity" type="com.ups.tracking.trackReply.Activity"
+			collection="array">
+			<bind-xml name="Activity" node="element" />
+		</field>
+		<field name="originPortDetails" type="com.ups.tracking.trackReply.OriginPortDetails">
+			<bind-xml name="OriginPortDetails" node="element" />
+		</field>
+		<field name="destinationPortDetails" type="com.ups.tracking.trackReply.DestinationPortDetails">
+			<bind-xml name="DestinationPortDetails" node="element" />
+		</field>
+		<field name="descriptionOfGoods" type="java.lang.String">
+			<bind-xml name="DescriptionOfGoods" node="element" />
+		</field>
+		<field name="cargoReady" type="com.ups.tracking.trackReply.CargoReady">
+			<bind-xml name="CargoReady" node="element" />
+		</field>
+		<field name="manifest" type="com.ups.tracking.trackReply.Manifest">
+			<bind-xml name="Manifest" node="element" />
+		</field>
+		<field name="carrierActivityInformation"
+			type="com.ups.tracking.trackReply.CarrierActivityInformation"
+			collection="array">
+			<bind-xml name="CarrierActivityInformation" node="element" />
+		</field>
+		<field name="document" type="com.ups.tracking.trackReply.Document"
+			collection="array">
+			<bind-xml name="Document" node="element" />
+		</field>
+		<field name="scheduledDeliveryDate" type="java.lang.String">
+			<bind-xml name="ScheduledDeliveryDate" node="element" />
+		</field>
+		<field name="scheduledDeliveryTime" type="java.lang.String">
+			<bind-xml name="ScheduledDeliveryTime" node="element" />
+		</field>
+		<field name="fileNumber" type="java.lang.String">
+			<bind-xml name="FileNumber" node="element" />
+		</field>
+		<field name="appointment" type="com.ups.tracking.trackReply.Appointment">
+			<bind-xml name="Appointment" node="element" />
+		</field>
+		<field name="package" type="com.ups.tracking.trackReply.Package"
+			collection="array">
+			<bind-xml name="Package" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.EstimatedDeparture">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.EstimatedDeparture</description>
+		<map-to xml="EstimatedDeparture" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Document">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Document</description>
+		<map-to xml="Document" />
+		<field name="type" type="com.ups.tracking.trackReply.Type"
+			required="true">
+			<bind-xml name="Type" node="element" />
+		</field>
+		<field name="graphicImage" type="java.lang.String" required="true">
+			<bind-xml name="GraphicImage" node="element" />
+		</field>
+		<field name="format" type="com.ups.tracking.trackReply.Format"
+			required="true">
+			<bind-xml name="Format" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ServiceCenter">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ServiceCenter</description>
+		<map-to xml="ServiceCenter" />
+		<field name="city" type="java.lang.String" required="true">
+			<bind-xml name="City" node="element" />
+		</field>
+		<field name="stateProvinceCode" type="java.lang.String"
+			required="true">
+			<bind-xml name="StateProvinceCode" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ShipmentType">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ShipmentType</description>
+		<map-to xml="ShipmentType" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.PickUpServiceCenter">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.PickUpServiceCenter</description>
+		<map-to xml="PickUpServiceCenter" />
+		<field name="city" type="java.lang.String" required="true">
+			<bind-xml name="City" node="element" />
+		</field>
+		<field name="stateProvinceCode" type="java.lang.String"
+			required="true">
+			<bind-xml name="StateProvinceCode" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Departure">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Departure</description>
+		<map-to xml="Departure" />
+		<field name="date" type="java.lang.String" required="true">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Shipper">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Shipper</description>
+		<map-to xml="Shipper" />
+		<field name="shipperNumber" type="java.lang.String">
+			<bind-xml name="ShipperNumber" node="element" />
+		</field>
+		<field name="address" type="com.ups.tracking.trackReply.Address">
+			<bind-xml name="Address" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.PackageWeight">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.PackageWeight</description>
+		<map-to xml="PackageWeight" />
+		<field name="unitOfMeasurement" type="com.ups.tracking.trackReply.UnitOfMeasurement">
+			<bind-xml name="UnitOfMeasurement" node="element" />
+		</field>
+		<field name="weight" type="java.lang.String">
+			<bind-xml name="Weight" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.TransactionReference">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.TransactionReference</description>
+		<map-to xml="TransactionReference" />
+		<field name="customerContext" type="java.lang.String">
+			<bind-xml name="CustomerContext" node="element" />
+		</field>
+		<field name="transactionIdentifier" type="java.lang.String">
+			<bind-xml name="TransactionIdentifier" node="element" />
+		</field>
+		<field name="xpciVersion" type="java.lang.String">
+			<bind-xml name="XpciVersion" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.PackageServiceOptions">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.PackageServiceOptions</description>
+		<map-to xml="PackageServiceOptions" />
+		<field name="COD" type="com.ups.tracking.trackReply.COD">
+			<bind-xml name="COD" node="element" />
+		</field>
+		<field name="signatureRequired" type="com.ups.tracking.trackReply.SignatureRequired">
+			<bind-xml name="SignatureRequired" node="element" />
+		</field>
+		<field name="importControl" type="java.lang.String">
+			<bind-xml name="ImportControl" node="element" />
+		</field>
+		<field name="commercialInvoiceRemoval" type="java.lang.String">
+			<bind-xml name="CommercialInvoiceRemoval" node="element" />
+		</field>
+		<field name="UPScarbonneutral" type="java.lang.String">
+			<bind-xml name="UPScarbonneutral" node="element" />
+		</field>
+		<field name="USPSPICNumber" type="java.lang.String">
+			<bind-xml name="USPSPICNumber" node="element" />
+		</field>
+		<field name="exchangeBased" type="java.lang.String">
+			<bind-xml name="ExchangeBased" node="element" />
+		</field>
+		<field name="packAndCollect" type="java.lang.String">
+			<bind-xml name="PackAndCollect" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.DeliveryDetails">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.DeliveryDetails</description>
+		<map-to xml="DeliveryDetails" />
+		<field name="deliveryDate" type="com.ups.tracking.trackReply.DeliveryDate">
+			<bind-xml name="DeliveryDate" node="element" />
+		</field>
+		<field name="serviceCenter" type="com.ups.tracking.trackReply.ServiceCenter">
+			<bind-xml name="ServiceCenter" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ActivityLocation">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ActivityLocation</description>
+		<map-to xml="ActivityLocation" />
+		<field name="address" type="com.ups.tracking.trackReply.Address"
+			collection="array">
+			<bind-xml name="Address" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Activity">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Activity</description>
+		<map-to xml="Activity" />
+		<field name="activityLocation" type="com.ups.tracking.trackReply.ActivityLocation">
+			<bind-xml name="ActivityLocation" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+		<field name="date" type="java.lang.String">
+			<bind-xml name="Date" node="element" />
+		</field>
+		<field name="time" type="java.lang.String">
+			<bind-xml name="Time" node="element" />
+		</field>
+		<field name="trailer" type="java.lang.String">
+			<bind-xml name="Trailer" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.OriginPortDetails">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.OriginPortDetails</description>
+		<map-to xml="OriginPortDetails" />
+		<field name="originPort" type="java.lang.String">
+			<bind-xml name="OriginPort" node="element" />
+		</field>
+		<field name="estimatedDeparture" type="com.ups.tracking.trackReply.EstimatedDeparture">
+			<bind-xml name="EstimatedDeparture" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.DestinationPortDetails">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.DestinationPortDetails</description>
+		<map-to xml="DestinationPortDetails" />
+		<field name="destinationPort" type="java.lang.String">
+			<bind-xml name="DestinationPort" node="element" />
+		</field>
+		<field name="estimatedArrival" type="com.ups.tracking.trackReply.EstimatedArrival">
+			<bind-xml name="EstimatedArrival" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Accessorial">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Accessorial</description>
+		<map-to xml="Accessorial" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String" required="true">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ProductType">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ProductType</description>
+		<map-to xml="ProductType" />
+		<field name="code" type="java.lang.String">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String" required="true">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.Service">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.Service</description>
+		<map-to xml="Service" />
+		<field name="code" type="java.lang.String" required="true">
+			<bind-xml name="Code" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+	<class name="com.ups.tracking.trackReply.ErrorLocation">
+		<description xmlns:common="http://www.ups.com/XMLSchema/XOLTWS/Common/v1.0">Default mapping for class
+			com.ups.tracking.trackReply.ErrorLocation</description>
+		<map-to xml="ErrorLocation" />
+		<field name="errorLocationElementName" type="java.lang.String">
+			<bind-xml name="ErrorLocationElementName" node="element" />
+		</field>
+		<field name="errorLocationElementReference" type="java.lang.String">
+			<bind-xml name="ErrorLocationElementReference" node="element" />
+		</field>
+		<field name="errorLocationAttributeName" type="java.lang.String">
+			<bind-xml name="ErrorLocationAttributeName" node="element" />
+		</field>
+	</class>
+</mapping>
